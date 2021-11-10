@@ -1,0 +1,25 @@
+
+from linebot import LineBotApi
+from linebot.models import LocationSendMessage
+from linebot.exceptions import LineBotApiError
+from linebot.models import TemplateSendMessage, ButtonsTemplate, PostbackTemplateAction, MessageTemplateAction, URITemplateAction
+
+
+
+CHANNEL_ACCESS_TOKEN = "*******bkFDEes06ZtqhEhwGPHng1rdwNF36MEqlHiX3Z863Cz9MvSbLi6zMtK0heTr+Bhq2Lc4Z9EV7CRk542Kuc6nv/Mr1kpz/w6tw5AdB04t89/1O/w1cDnyilFU="
+to = "**********"
+
+
+def get_room_member_ids(self, room_id, start=None, timeout=None):
+ member_ids_res = line_bot_api.get_room_member_ids(room_id)
+
+ print(member_ids_res.member_ids)
+ print(member_ids_res.next)
+# return member_ids_res
+#文字訊息
+try:
+    line_bot_api.push_message(to, TextSendMessage("GET"))
+except LineBotApiError as e:
+    # error handle
+    raise e
+    
